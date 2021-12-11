@@ -98,6 +98,7 @@ void Dialog::OnReadReady()
     if (m_socket.bytesAvailable()) {
         auto content = m_socket.readAll();
         ui->listWidget->addItem(content);
+        ui->listWidget->scrollToBottom();
     }
 }
 
